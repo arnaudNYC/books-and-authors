@@ -1,22 +1,23 @@
 {
-  "name": "templated",
+  "name": "books-and-authors",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
+    "prop-types": "^15.7.2",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
     "react-scripts": "3.4.0"
   },
   "scripts": {
-    "start": "EXTEND_ESLINT=true react-scripts start",
+    "start": "concurrently \"EXTEND_ESLINT=true react-scripts start\" \"yarn server\"",
     "build": "EXTEND_ESLINT=true react-scripts build",
     "test": "EXTEND_ESLINT=true react-scripts test",
-    "eject": "react-scripts eject",
     "prettier": "prettier prettier.config.js src/**/*.{js,jsx} --write",
-    "lint:fix": "eslint src/**/*.{js,jsx} --fix"
+    "lint": "eslint src/**/*.jsx --fix --color",
+    "server": "json-server db.json --watch --port 4000 --delay 100 --middlewares jitter.js"
   },
   "eslintConfig": {
     "extends": [
@@ -39,6 +40,7 @@
     ]
   },
   "devDependencies": {
+    "concurrently": "^5.1.0",
     "eslint": "^6.8.0",
     "eslint-config-airbnb": "^18.0.1",
     "eslint-config-prettier": "^6.10.0",
@@ -48,6 +50,7 @@
     "eslint-plugin-react": "^7.18.3",
     "eslint-plugin-react-hooks": "^1.7.0",
     "husky": "^4.2.3",
+    "json-server": "^0.16.0",
     "lint-staged": ">=10",
     "prettier": "^1.19.1",
     "pretty-quick": "^2.0.1"
@@ -62,5 +65,6 @@
       "eslint --cache --fix",
       "yarn pretty-quick"
     ]
-  }
+  },
+  "proxy": "http://localhost:4000"
 }

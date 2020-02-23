@@ -1,0 +1,16 @@
+{
+  "authors": [
+    { "id": 1, "name": "J. K. Rowling" },
+    { "id": 2, "name": "Stephen King" },
+    { "id": 3, "name": "Victor Hugo" },
+    { "id": 4, "name": "J. D. Salinger" }
+  ],
+  "books": [
+    { "id": 10, "title": "Harry Potter Book 1", "authorId": 1 },
+    { "id": 20, "title": "Harry Potter Book2", "authorId": 1 },
+    { "id": 30, "title": "Les Misérables", "authorId": 3 },
+    { "id": 40, "title": "Catcher in the Rye", "authorId": 4 },
+    { "id": 50, "title": "Carrie", "authorId": 2 },
+    { "id": 60, "title": "The Shining", "authorId": 2 }
+  ]
+}

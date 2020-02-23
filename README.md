@@ -1,3 +1,3 @@
-# cra-starter
+# Books and Authors
 
-A create-react-app starter
+Example code written for [this YouTube video](https://youtu.be/mQaSeNlaqaY)
